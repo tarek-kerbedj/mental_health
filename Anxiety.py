@@ -29,7 +29,7 @@ def anxiety():
         st.write("General information about anxiety...")
     elif selected_submenu == "Podcasts":
         st.write("Podcasts that mainly discuss Anxiety and Anxiety disorders")
-        st.table(podcasts_df)
+      
         # Create a new column with the formatted links
         st.data_editor(
         podcasts_df,
@@ -53,47 +53,6 @@ def anxiety():
         hide_index=True,
 
 )
-    #     st.data_editor(
-    #     podcasts_df,
-    #     column_config={
-    #         "Spotify": st.column_config.LinkColumn(
-    #             "Spotify Link",
-    #             help="Click to open the podcast link",
-    #             validate=r"^https?://.*$",
-    #             display_text="Open Spotify Link",
-    #             max_chars=200,
-    #         ),
-    #         "Apple": st.column_config.LinkColumn(
-    #             "Apple links",
-    #             help="Click to open the podcast link",
-    #             validate=r"^https?://.*$",  # Added validate parameter
-    #             display_text="Open Apple Link",
-    #             max_chars=200,  # Added max_chars parameter
-    #         ),
-    #     },
-    #     hide_index=True,
-    # )
-  
-    #     st.data_editor(
-    #     podcasts_df,
-    #     column_config={
-    #         "Spotify": st.column_config.LinkColumn(
-    #             "Spotify Link",
-    #             help="Click to open the podcast link",
-    #             validate=r"^https?://.*$",
-    #             display_text="Open Spotify Link",  # Replace "PodcastName" with your actual column name
-    #             max_chars=200,
-    #         ),
-
-    #         "Apple": st.column_config.LinkColumn(
-    #         "Apple links",
-    #         help="Click to open the podcast link",
-    
-    #         display_text="Open apple link"
-    #     ),
-    #     },
-    #     hide_index=True,
-    # )
 
 
     elif selected_submenu=="Books":
@@ -111,5 +70,9 @@ def anxiety():
                 max_chars=200  # Allow longer URLs if needed
             )
         },
+        use_container_width=True,
         hide_index=True,
     )
+
+      
+   
