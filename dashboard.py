@@ -72,17 +72,31 @@ elif selected_main == "FAQ":
     st.header(":mailbox: Get In Touch With Me!")
 
 
-    contact_form = """
-    <form action="https://formsubmit.co/e76bae1b49ba1ef7b9c9d80a1c74fcb6 " method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message here"></textarea>
-        <button type="submit">Send</button>
-    </form>
-    """
+    # contact_form = """
+    # <form action="https://formsubmit.co/e76bae1b49ba1ef7b9c9d80a1c74fcb6 " method="POST">
+    #     <input type="hidden" name="_captcha" value="false">
+    #     <input type="text" name="name" placeholder="Your name" required>
+    #     <input type="email" name="email" placeholder="Your email" required>
+    #     <textarea name="message" placeholder="Your message here"></textarea>
+    #     <button type="submit">Send</button>
+    # </form>
+    # """
+    contact_form2="""
+<form
+  action="https://formspree.io/f/xqaedrjr" method="POST">
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>"""
 
-    st.markdown(contact_form, unsafe_allow_html=True)
+    st.markdown(contact_form2, unsafe_allow_html=True)
 
     # # Use Local CSS File
     # def local_css(file_name):
